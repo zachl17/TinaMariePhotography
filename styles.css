@@ -1,7 +1,8 @@
 body, html {
     height: 100%;
     background-image: url("../Images/WeddingImage.jpg");
-    background-position: center;
+    /***background-position: center; ***/
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
         color: #ffffff;
@@ -64,6 +65,21 @@ a{
   background: #3B5998;  
   color: white;
 }
+
+*{
+    box-sizing: border-box
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+    opacity: 1 !important;
+}
+
+img {
+    vertical-align: middle;
+}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -141,6 +157,7 @@ a{
   from {opacity: .4} 
   to {opacity: 1}
 }
+
 
 #CompanyName{
     text-align: center;
