@@ -1,11 +1,12 @@
-var slideIndex = 1;
+$slideIndex = 1;
+$currnetPath = $(location).attr('pathname');
 
 $(function () {
     $("#header").load("Header.html");
     $("#footer").load("Footer.html");
 });
 
-if (window.location.pathname == '/Portfolio.html') {
+if ($currnetPath == '/Portfolio.html') {
     document.addEventListener("DOMContentLoaded", function () {
         showSlides(slideIndex);
     });

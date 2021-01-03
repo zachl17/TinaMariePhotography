@@ -1,13 +1,20 @@
 body,
 html {
+    background-color: #666666;
+    font-family: 'Roboto Mono', monospace;
     height: 100%;
-    background-image: url("../Images/WeddingImage.jpg");
+}
+
+.container {
+    min-height: 100% !important;
+    height: 100% !important;
+    width: 100%;
     background-position: center;
-    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #ffffff;
-    font-family: 'Roboto Mono', monospace;
+    background-image: url("../Images/WeddingImage.jpg");
+    padding: 0 30px;
+    position: relative;
 }
 
 a {
