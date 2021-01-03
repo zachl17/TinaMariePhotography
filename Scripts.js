@@ -1,12 +1,12 @@
-$slideIndex = 1;
-$currnetPath = $(location).attr('pathname');
+var slideIndex = 1;
+var currentPath = $(location).attr('pathname');
 
 $(function () {
     $("#header").load("Header.html");
     $("#footer").load("Footer.html");
 });
 
-if ($currnetPath == '/Portfolio.html') {
+if (currentPath == '/Portfolio.html') {
     document.addEventListener("DOMContentLoaded", function () {
         showSlides(slideIndex);
     });
@@ -21,8 +21,8 @@ if ($currnetPath == '/Portfolio.html') {
 
     function showSlides(n) {
         var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
+        var slides =  document.getElementsByClassName("mySlides");
+        var dots =  document.getElementsByClassName("dot");
         if (n > slides.length) {
             slideIndex = 1
         }
