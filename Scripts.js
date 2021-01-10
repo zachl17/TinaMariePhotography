@@ -3,6 +3,7 @@ var currentPath = $(location).attr('pathname');
 
 $(function () {
     $("#header").load("Header.html");
+    $("#navbar").load("Navbar.html");
     $("#footer").load("Footer.html");
 });
 
