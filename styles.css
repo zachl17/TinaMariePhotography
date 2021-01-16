@@ -1,14 +1,15 @@
 body,
 html {
-    color: #ffffff;
+    color: black;
     font-family: 'Roboto Mono', monospace;
-    background-color: #C2C2C2;
-    height: 100% !important;
+    background-color: #ffffff;
+    height: 99% !important;
     width: 100% !important;
+    padding: 5px;
 }
 
 .container {
-    height: 100% !important;
+    height: 80% !important;
     width: 100% !important;
     max-width: none !important;
     padding: 0px !important;
@@ -22,28 +23,28 @@ html {
 }
 
 /* Add a black background color to the top navigation */
-.topnav {
+#topnav {
     overflow: hidden;
     text-align: center;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+#topnav a {
     display: inline-block;
-    color: #ffffff;
+    color: black;
     padding: 15px 15px;
     text-decoration: none;
     font-size: 18px;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+#topnav a:hover {
     background-color: #ddd;
     color: black;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+#topnav .icon {
     display: none;
 }
 
@@ -76,6 +77,85 @@ html {
 img {
     vertical-align: middle;
 }
+.imageGrid {
+  line-height: 0;
+}
+.imageGrid .tile {
+  width: 50%;
+  min-height:20em;
+  line-height: 1.2;
+  display:inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  
+  color:#fff;
+  font-family:"Verdana",sans-serif;
+  text-shadow: 2px 2px 2px #000;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.imageGrid .tile:before {
+  content: '';
+  background-color: rgba(15,15,15,0.5);
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.imageGrid .tile:hover:before {
+  display: none;
+}
+
+.imageGrid .tile .textWrapper {
+  text-align: center;
+  vertical-align: middle;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .75em;
+}
+
+.imageGrid .tile .textWrapper .content {
+  display: none;
+}
+
+.imageGrid .tile:hover .textWrapper .content {
+  display: block;
+}
+
+.imageGrid .tile:hover .textWrapper .content h2 {
+  margin: 0;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 900px) {
+    .Col {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .Col {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+#foto{
+    height: 100% !important;
+    width: 100% !important;
+}
 
 /* Slideshow container */
 .fotorama {
@@ -87,14 +167,6 @@ img {
     position: relative;
 }
 
-.fotorama img {
-    height: 80% !important;
-    width: 100% !important;
-    max-width: none !important;
-    padding: 0px !important;
-    margin: 0px !important;
-    position: relative;
-}
 
 /* Fading animation */
 .fade {
